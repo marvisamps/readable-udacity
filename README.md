@@ -13,8 +13,8 @@ To get started developing right away:
     - `npm install`
     - `node server`
 * In another terminal window, use Create React App to scaffold out the front-end
-    - `create-react-app frontend`
-    - `cd frontend`
+    - `create-react-app front`
+    - `cd front`
     - `npm start`
 
 ## API Server
