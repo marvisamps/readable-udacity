@@ -1,0 +1,49 @@
+@import "~antd/dist/antd.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  margin-top: 15px;
+  border: 0.5px solid #e2e2e2;
+  background-color: #e2e2e2;
+  color: #e2e2e2;
+}
+
+/* Override list item styles */
+.ant-list-vertical .ant-list-item-meta,
+.ant-list-vertical .ant-list-item-meta-title {
+  margin-bottom: 0;
+}
+
+.ant-list-vertical .ant-list-item-action {
+  margin-top: 3px;
+  margin-left: 3px;
+}
+
+.ant-list-vertical .ant-list-item-meta-title {
+  font-size: 18px;
+}
+
+.ant-list-vertical .ant-list-item-meta-description {
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.ant-form-item {
+  margin-bottom: 28px;
+}
+
+.ant-form-item-label label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #666;
+}
