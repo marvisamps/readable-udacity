@@ -4,7 +4,7 @@ This is the starter project for the final assessment project for Udacity's Redux
 
 This repository includes the code for the backend API Server that you'll use to develop and interact with the front-end portion of the project.
 
-## Start Developing
+## Start Using
 
 To run this project you must follow these steps:
 
