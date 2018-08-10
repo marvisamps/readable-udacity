@@ -6,17 +6,21 @@ This repository includes the code for the backend API Server that you'll use to 
 
 ## Start Developing
 
-To get started developing right away:
+To run this project you must follow these steps:
+
+* Clone this repository
 
 * Install and start the API server
     - `cd api-server`
-    - `npm install`
-    - `node server`
-* In another terminal window, use Create React App to scaffold out the front-end
-    - `create-react-app front`
+    - `npm i && npm start`
+
+* In another terminal window, use these following commands to start the front-end
     - `cd front`
-    - `npm start`
+    - `npm i && npm start`
 
-## API Server
+## Resources used on this project
+- React
+- AntDesign
+- Redux
+- UUID
 
-Information about the API server and how to use it can be found in its [README file](api-server/README.md).
