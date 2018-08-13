@@ -27,7 +27,7 @@ class PostList extends Component {
 
   render() {
     const { posts, sortBy } = this.props;
-    const sortedPosts = this.sortPosts(posts, sortBy);
+    const sortedPosts = this.sortPosts([...posts], sortBy);
 
     return (
       <List

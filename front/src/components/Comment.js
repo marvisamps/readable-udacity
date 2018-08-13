@@ -46,7 +46,7 @@ class Comment extends Component {
           <Input.TextArea
             rows={2}
             placeholder={'Write a comment'}
-            value={this.state.comment}
+            value={comment.body}
             onChange={this.handleChange}
           />
           <Row type="flex" align="middle" justify="space-between">

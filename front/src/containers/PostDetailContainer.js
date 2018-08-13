@@ -6,11 +6,12 @@ import { fetchPost, deletePost } from '../actions/posts';
 import { fetchComments } from '../actions/comments';
 import Sidebar from '../components/Sidebar';
 import PostDetail from '../components/PostDetail';
+import NotFound from '../components/NotFound';
 
 class PostDetailContainer extends Component {
   state = {
     redirect: false,
-  }
+  };
 
   componentDidMount() {
     const id = this.props.match.params.id;
@@ -23,7 +24,7 @@ class PostDetailContainer extends Component {
       .then(() => this.setState({
         redirect: !this.state.redirect,
       }));
-  }
+  };
 
   render() {
     const { post, comments } = this.props;
@@ -34,6 +35,10 @@ class PostDetailContainer extends Component {
 
     if (this.state.redirect) {
       return <Redirect to="/" />
+    }
+
+    if (!post) {
+      return <NotFound />
     }
 
     return (
@@ -100,7 +105,7 @@ const styles = {
 }
 
 const mapStateToProps = ({ posts, comments }) => ({
-  post: posts,
+  post: posts ? posts : null,
   comments: comments,
 })
 

@@ -114,14 +114,36 @@ class PostFormContainer extends Component {
                   onChange={(e) => this.handleInputChange(e, "body")}
                 />
               </Form.Item>
+
+              {!this.state.title || !this.state.author || !this.state.category || !this.state.body ? (
+                <Form.Item>
+                  <p>Please, fill all the informations before publishing.</p>
+                </Form.Item>
+              ) : (
+                <Form.Item>
+                  <p>You have filled all the informations, well done! :)</p>
+                </Form.Item>
+              )}
+
               <Form.Item>
-                <Button
-                  type="primary"
-                  style={styles.button}
-                  onClick={this.handleSubmit}
-                >
-                  {this.state.editMode ? 'Save' : 'Publish'}
-                </Button>
+                {!this.state.title || !this.state.author || !this.state.category || !this.state.body ? (
+                  <Button
+                    type="primary"
+                    style={styles.button}
+                    onClick={this.handleSubmit}
+                    disabled
+                  >
+                    Publish
+                  </Button>
+                ) : (
+                  <Button
+                    type="primary"
+                    style={styles.button}
+                    onClick={this.handleSubmit}
+                  >
+                    {this.state.editMode ? 'Save' : 'Publish'}
+                  </Button>
+                )}
                 <Link to="/">
                   <Button style={styles.button}>Cancel</Button>
                 </Link>
